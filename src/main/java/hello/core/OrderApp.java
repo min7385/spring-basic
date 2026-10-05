@@ -7,6 +7,8 @@ import hello.core.member.MemberServiceImpl;
 import hello.core.order.Order;
 import hello.core.order.OrderService;
 import hello.core.order.OrderServiceImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class OrderApp {
 
@@ -15,10 +17,14 @@ public class OrderApp {
 //        MemberService memberService = new MemberServiceImpl();
 //        OrderService orderService = new OrderServiceImpl();
         // 2026.09.25 AppConfig를 통한 의존성 주입(DI)
-        AppConfig appConfig = new AppConfig();
+//        AppConfig appConfig = new AppConfig();
+//
+//        MemberService memberService = appConfig.memberService();
+//        OrderService orderService = appConfig.orderService();
 
-        MemberService memberService = appConfig.memberService();
-        OrderService orderService = appConfig.orderService();
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(OrderApp.class);
+        MemberService memberService = applicationContext.getBean(MemberService.class);
+        OrderService orderService = applicationContext.getBean(OrderService.class);
 
 
         Long memberId = 1L;
