@@ -45,3 +45,25 @@
 
 </div>
 </details>
+
+<details>
+<summary>31강 - BeanFactory와 ApplicationContext</summary>
+<div markdown="1">
+
+## BeanFactory
+
+- 스프링 컨테이너의 최상위 인터페이스이다.
+- 스프링 빈을 관리하고 조회하는 역할을 담당한다.
+
+## ApplicationContext
+
+- `BeanFactory`의 기능을 모두 상속받아 제공한다.
+- 빈을 관리하고 조회하는 역할 외에 부가 기능을 제공한다.
+- 주요 부가 기능 관련 인터페이스:
+    - `MessageSource`
+    - `EnvironmentCapable`
+    - `ApplicationEventPublisher`
+    - `ResourceLoader`
+
+</div>
+</details>
