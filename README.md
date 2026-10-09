@@ -67,3 +67,16 @@
 
 </div>
 </details>
+
+<details>
+<summary>32강 - BeanDefinition</summary>
+<div markdown="1">
+
+## BeanDefinition
+- 빈 설정 정보를 추상화한 메타 정보이다.
+- 스프링 컨테이너는 설정이 자바 코드인지 XML인지 직접 구분하지 않는다.
+- 각 설정 정보를 `BeanDefinition`으로 변환한 뒤, 해당 정보만을 바탕으로 빈을 생성한다.
+- 이를 통해 **다양한 설정 형식을 지원할 수 있다.**
+
+</div>
+</details>
